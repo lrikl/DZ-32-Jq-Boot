@@ -78,6 +78,7 @@ function deleteTodoItem(button) {
 
 function handleEdit(button) {
     const todoItem = button.closest('.todo-item');
+    const editPanel = button.closest('.edit-panel');
     const textElement = todoItem.find('.todo-p');
     const currentText = textElement.text();
     const indexCurrentItem = getCurrentIndexItem(todoItem);
@@ -88,7 +89,7 @@ function handleEdit(button) {
     const saveButton = $('<button>', { class: 'save-item', text: 'Save' });
 
     textElement.replaceWith(editInput);
-    todoItem.append(saveButton);
+    editPanel.append(saveButton);
     button.hide();
 
     saveButton.on('click', () => {
