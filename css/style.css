@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 50px;
+}
+
+.todo-block {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #555;
+}
+
+.todo-input-wrap {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-btn, 
+.save-item {
+    padding: 10px 20px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-btn:hover, 
+.save-item:hover {
+    background-color: #007200;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #fafafa;
+}
+
+.todo-p {
+    flex: 1;
+    padding: 10px;
+}
+
+.edit-panel {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-item,
+.delete-all {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-item:hover, 
+.delete-all:hover {
+    background-color: #c9302c;
+}
+
+.delete-all {
+   align-self: flex-end;
+}
+
+.done-item {
+    cursor: pointer;
+}
+
+.check-bg {
+    background-color: #b9e9b9;
+    border-color: #008000;
+}
+
+.edit-item {
+    background: none;
+    border: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.edit-item::before {
+    content: "";
+    background: url("../icon/icon1.svg") no-repeat center/contain;
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+
+.edit-item:hover {
+    transform: scale(1.1);
+}
+
+.save-item {
+    padding: 8px;
+    font-size: 12px;
+}
+
+.modal-title {
+    font-size: 20px;
+}
+
+.modal-task-text {
+    font-size: 18px;
+}
